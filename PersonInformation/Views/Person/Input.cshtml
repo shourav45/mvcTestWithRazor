@@ -1,0 +1,27 @@
+﻿
+@using PersonInformation.Controllers
+
+@{
+    ViewBag.Title = "Input";
+}
+
+<h2>Input person information</h2>
+@using (Html.BeginForm("Input","Person",FormMethod.Post))
+{
+    <div>
+        Name: <input type="text" name="personname" id="name" value=""/>
+    </div>
+    <div>
+        Email: <input type="text" name="personemail" id="email" value=""/>
+    </div>
+    <div>
+        Mobile: <input type="text" name="personmobile" id="mobile" value=""/>
+    </div>
+    <div>
+        Address: <input type="text" name="personaddress" id="address" value=""/>
+    </div>
+    <div>
+        <input type="submit" value="submit"/>
+    </div>
+
+}

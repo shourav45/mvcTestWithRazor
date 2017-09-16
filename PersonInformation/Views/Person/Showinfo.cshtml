@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Showinfo";
+}
+
+<h2>Show Information</h2>
+<p>
+    @ViewBag.Name
+</p>
+<p>
+    @ViewBag.Email
+</p>
+<p>
+    @ViewBag.Mobile
+</p>
+<p>
+    @ViewBag.Address
+</p>
+
+<br/>
+<input type="button" value="Input" onclick="location.href='@Url.Action("Input", "Person")'" />
