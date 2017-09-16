@@ -12,7 +12,7 @@ namespace PersonInformation.Controllers
 
     public class PersonController : Controller
     {
-        public bool flag = false;
+       
         // GET: Person
         public ActionResult Input()
         {
