@@ -4,18 +4,33 @@
 }
 
 <h2>Show Information</h2>
-<p>
-    @ViewBag.Name
-</p>
-<p>
-    @ViewBag.Email
-</p>
-<p>
-    @ViewBag.Mobile
-</p>
-<p>
-    @ViewBag.Address
-</p>
+@using (Html.BeginForm("Showinfo", "Person", FormMethod.Get))
+{
+   
+    foreach (var person in ViewBag.data)
+    {
+       
+        <div style="border-bottom-width: 400px">
+            <li>
+                Name: @person.Name
+            </li>
+            <li>
+                Email:  @person.Email
+            </li>
+            <li>
+                Moblie: @person.Mobile
+            </li>
+            <li>
+                Address:  @person.Address
+            </li>
+        </div>
+        <br/>
+        <br/>
+
+    }
+
+}
 
 <br/>
-<input type="button" value="Input" onclick="location.href='@Url.Action("Input", "Person")'" />
+<button class="btn btn-info" type="button"
+        onclick="location.href = '@Url.Action("Input", "Person")'">Insert</button>

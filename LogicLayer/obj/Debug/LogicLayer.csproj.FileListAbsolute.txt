@@ -1,0 +1,5 @@
+C:\Users\Shourav Kumar\Desktop\mvcTestwithRozor\LogicLayer\bin\Debug\LogicLayer.dll
+C:\Users\Shourav Kumar\Desktop\mvcTestwithRozor\LogicLayer\bin\Debug\LogicLayer.pdb
+C:\Users\Shourav Kumar\Desktop\mvcTestwithRozor\LogicLayer\obj\Debug\LogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\Shourav Kumar\Desktop\mvcTestwithRozor\LogicLayer\obj\Debug\LogicLayer.dll
+C:\Users\Shourav Kumar\Desktop\mvcTestwithRozor\LogicLayer\obj\Debug\LogicLayer.pdb

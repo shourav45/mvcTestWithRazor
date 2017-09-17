@@ -51,3 +51,5 @@ C:\Users\Shourav Kumar\Desktop\mvcTestwithRozor\PersonInformation\bin\Newtonsoft
 C:\Users\Shourav Kumar\Desktop\mvcTestwithRozor\PersonInformation\obj\Debug\PersonInformation.csprojResolveAssemblyReference.cache
 C:\Users\Shourav Kumar\Desktop\mvcTestwithRozor\PersonInformation\obj\Debug\PersonInformation.dll
 C:\Users\Shourav Kumar\Desktop\mvcTestwithRozor\PersonInformation\obj\Debug\PersonInformation.pdb
+C:\Users\Shourav Kumar\Desktop\mvcTestwithRozor\PersonInformation\bin\LogicLayer.dll
+C:\Users\Shourav Kumar\Desktop\mvcTestwithRozor\PersonInformation\bin\LogicLayer.pdb

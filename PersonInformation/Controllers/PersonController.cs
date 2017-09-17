@@ -8,7 +8,8 @@ namespace PersonInformation.Controllers
 {
     using System.Security.Cryptography.X509Certificates;
 
-   
+    using LogicLayer.BusinessLogic;
+    using LogicLayer.BusinessObject;
 
     public class PersonController : Controller
     {
@@ -29,16 +30,23 @@ namespace PersonInformation.Controllers
             ViewBag.Mobile = frm["personmobile"].ToString();
             ViewBag.Address = frm["personaddress"].ToString();
             
-            return View("Showinfo");
+            Person p=new Person();
+            p.Name = ViewBag.Name;
+            p.Email = ViewBag.Email;
+            p.Mobile = ViewBag.Mobile;
+            p.Address = ViewBag.Address;
+            PersonInfoHandler ph=new PersonInfoHandler();
+            if (ph.Insert(p) == true) ViewBag.message = "Data Inserted";
+            return View();
         }
 
-        public ActionResult Showinfo(string name, string email, string mobile,string address)
+        public ActionResult Showinfo()
         {
-            ViewBag.Name = name;
-            ViewBag.Email = email;
-            ViewBag.Mobile = mobile;
-            ViewBag.Address = address;
-            return View(ViewBag);
+            PersonInfoHandler ph = new PersonInfoHandler();
+            List<Person> alldataList=new List<Person>();
+            alldataList = ph.GetAll();
+            ViewBag.data = alldataList;
+            return View();
         }
     }
 }

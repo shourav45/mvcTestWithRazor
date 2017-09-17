@@ -9,19 +9,54 @@
 @using (Html.BeginForm("Input","Person",FormMethod.Post))
 {
     <div>
-        Name: <input type="text" name="personname" id="name" value=""/>
+        <td style="width: 40px">
+            Name
+        </td>
+        <td>
+            <input type="text" name="personname" id="name" value=""/>
+        </td>
     </div>
+    <br/>
+
     <div>
-        Email: <input type="text" name="personemail" id="email" value=""/>
+        <td style="width: 40px">
+            Email
+        </td>
+        <td>
+            <input type="text" name="personemail" id="email" value="" />
+        </td>
     </div>
+    <br />
+     
     <div>
-        Mobile: <input type="text" name="personmobile" id="mobile" value=""/>
+        <td style="width: 40px">
+            Mobile
+        </td>
+        <td>
+            <input type="text" name="personmobile" id="mobile" value="" />
+        </td>
     </div>
+    <br />
+    
     <div>
-        Address: <input type="text" name="personaddress" id="address" value=""/>
+        <td style="width: 40px">
+            Address
+        </td>
+        <td>
+            <input type="text" name="personaddress" id="address" value="" />
+        </td>
     </div>
-    <div>
-        <input type="submit" value="submit"/>
+    <br />
+
+    
+    <div> 
+        <button class="btn btn-info" type="submit">Submit</button>
+
+        <button class="btn btn-info" type="button"
+                onclick="location.href = '@Url.Action("Showinfo", "Person")'">View page</button>
     </div>
+
+    <br />
+    <p>@ViewBag.message</p>
 
 }
