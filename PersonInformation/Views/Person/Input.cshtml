@@ -6,14 +6,17 @@
 }
 
 <h2>Input person information</h2>
+<script src = "~/Scripts/jquery.validate.js"></script>
+
 @using (Html.BeginForm("Input","Person",FormMethod.Post))
 {
+
     <div>
         <td style="width: 40px">
             Name
         </td>
         <td>
-            <input type="text" name="personname" id="name" value=""/>
+            <input class="form-control" type="text" name="personname" id="name" value="" required=""/>
         </td>
     </div>
     <br/>
@@ -23,32 +26,32 @@
             Email
         </td>
         <td>
-            <input type="text" name="personemail" id="email" value="" />
+            <input class="form-control" type="text" name="personemail" id="email" value="" required=""/>
         </td>
     </div>
     <br />
-     
+
     <div>
         <td style="width: 40px">
             Mobile
         </td>
         <td>
-            <input type="text" name="personmobile" id="mobile" value="" />
+            <input class="form-control" type="text" name="personmobile" id="mobile" value="" required=""/>
         </td>
     </div>
     <br />
-    
+
     <div>
         <td style="width: 40px">
             Address
         </td>
         <td>
-            <input type="text" name="personaddress" id="address" value="" />
+            <input class="form-control" type="text" name="personaddress" id="address" value="" required=""/>
         </td>
     </div>
     <br />
 
-    
+
     <div> 
         <button class="btn btn-info" type="submit">Submit</button>
 
