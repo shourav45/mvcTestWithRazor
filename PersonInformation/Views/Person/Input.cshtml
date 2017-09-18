@@ -6,54 +6,82 @@
 }
 
 <h2>Input person information</h2>
-<script src = "~/Scripts/jquery.validate.js"></script>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script type="text/javascript">
+    function check() {
+        var num = $("#mobile").val();
+      
+        if (num.length < 10) {
+            alert("Mobile number must be in 10-15 digit.");
+            return false;
+        }
+        else if (num.length > 15) {
+            alert("Mobile number must be in 10-15 digit.");
+            return false;
+        }
+        else{ alert("Form will be submitted successfully.");
+            return true;
+        }
+    }
+    
+</script>
 
 @using (Html.BeginForm("Input","Person",FormMethod.Post))
 {
+    
+        <div>
+            <td style="width: 40px">
+                Name
+            </td>
+            <td>
+                <input class="form-control" type="text" name="personname" id="name" value="" required=""/>
+            </td>
+        </div>
+        <br/>
 
-    <div>
-        <td style="width: 40px">
-            Name
-        </td>
-        <td>
-            <input class="form-control" type="text" name="personname" id="name" value="" required=""/>
-        </td>
-    </div>
-    <br/>
+        <div>
+            <td style="width: 40px">
+                Email
+            </td>
+            <td>
+                <input class="form-control" type="text" name="personemail" id="email" value="" required=""/>
+            </td>
+        </div>
+        <br />
 
-    <div>
-        <td style="width: 40px">
-            Email
-        </td>
-        <td>
-            <input class="form-control" type="text" name="personemail" id="email" value="" required=""/>
-        </td>
-    </div>
-    <br />
+        <div>
+            <td style="width: 40px">
+                Mobile
+            </td>
+            <td>
+                
+                <input class="form-control" type="text" name="personmobile" id="mobile"  value="" required=""/>
 
-    <div>
-        <td style="width: 40px">
-            Mobile
-        </td>
-        <td>
-            <input class="form-control" type="text" name="personmobile" id="mobile" value="" required=""/>
-        </td>
-    </div>
-    <br />
+            </td>
+        </div>
+        <br />
 
-    <div>
-        <td style="width: 40px">
-            Address
-        </td>
-        <td>
-            <input class="form-control" type="text" name="personaddress" id="address" value="" required=""/>
-        </td>
-    </div>
-    <br />
+        <div>
+            <td style="width: 40px">
+                Address
+            </td>
+            <td>
+                <input class="form-control" type="text" name="personaddress" id="address" value="" required=""/>
+            
+           
+            </td>
+        </div>
+        <br />
 
 
     <div> 
-        <button class="btn btn-info" type="submit">Submit</button>
+        <button class="btn btn-info" type="submit" id="frmsubmit" onclick="return check()";>Submit</button>
+       
 
         <button class="btn btn-info" type="button"
                 onclick="location.href = '@Url.Action("Showinfo", "Person")'">View page</button>
